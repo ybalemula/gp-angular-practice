@@ -3,25 +3,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
 import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
 const routes: Routes = [
   {
-    path:'',
-    component:AppComponent,
-    children:[
-      {
-        path:'',
-        component:MohammadComponent
-      }
-    ]
+    path: '',
+    component: DashboardComponent,
   },
   {
-    path:'mahesh',
-    component:MaheshLoginComponent
-  }
+    path: 'yadagiri',
+    component: YadagiriTestComponent,
+  },
+  {
+    path: 'mohammad',
+    component: MohammadComponent,
+  },
+  {
+    path: 'mahesh',
+    component: MaheshLoginComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

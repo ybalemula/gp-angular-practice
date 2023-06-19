@@ -1,29 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
 import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import{MatButtonModule}from '@angular/material/button';
-import{MatDialogModule}from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import{LoginService}from 'src/app/maheshreddy/services/login.service';
-import { HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { LoginService } from 'src/app/maheshreddy/services/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {HttpClientModule} from '@angular/common/http';
-import {LoginpageService} from './loginpage.service';
-import {ReactiveFormsModule} from '@angular/forms';
-import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component'
+import { MatCardModule } from '@angular/material/card';
+import { LoginpageService } from './loginpage.service';
+import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -31,7 +27,8 @@ import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.comp
     YadagiriTestComponent,
     MaheshLoginComponent,
     MohammadComponent,
-    SandeepTestComponent
+    SandeepTestComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,16 +42,18 @@ import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.comp
     MatInputModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatListModule,
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    LoginpageService,
     MatCardModule,
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [LoginpageService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
