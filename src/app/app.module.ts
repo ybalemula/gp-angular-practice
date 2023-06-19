@@ -12,13 +12,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import {LoginpageService} from './loginpage.service';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
     MohammadComponent,
-    
+    SandeepTestComponent
   ],
   imports: [
     BrowserModule,
