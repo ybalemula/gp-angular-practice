@@ -13,4 +13,5 @@ export class AppComponent {
   openlogin() {
     this._dialog.open(MaheshLoginComponent);
   }
+  opened=false;
 }

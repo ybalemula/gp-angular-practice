@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginpageService } from 'src/app/loginpage.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-mohammad',
@@ -12,7 +14,7 @@ export class MohammadComponent implements OnInit {
   Issubmitted: boolean = false;
   userdata: {} = {};
   Showerror: boolean = false;
-  constructor(private _loginservice: LoginpageService) { }
+  constructor(private _loginservice: LoginpageService,  private router: Router) { }
   ngOnInit() {
     this.LoginPage = new FormGroup({
       Username: new FormControl('', [Validators.required]),
@@ -29,7 +31,7 @@ export class MohammadComponent implements OnInit {
         (res) => {
           if (res.token) {
             this.userdata = res;
-          
+            this.router.navigate(['mohammaddashboard']);
             this.Showerror = false;
           }
           else {
