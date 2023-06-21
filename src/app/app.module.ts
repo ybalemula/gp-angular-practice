@@ -20,7 +20,13 @@ import { LoginpageService } from './loginpage.service';
 import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatListModule } from '@angular/material/list';
-
+import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
+import {MatMenuModule} from '@angular/material/menu';
+import{MatBadgeModule} from '@angular/material/badge';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import{MatAutocompleteModule}  from '@angular/material/autocomplete';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +35,7 @@ import { MatListModule } from '@angular/material/list';
     MohammadComponent,
     SandeepTestComponent,
     DashboardComponent,
+    MohammadDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +50,11 @@ import { MatListModule } from '@angular/material/list';
     HttpClientModule,
     ReactiveFormsModule,
     MatListModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatTooltipModule
   ],
   providers: [
     LoginService,
