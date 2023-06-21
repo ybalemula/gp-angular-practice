@@ -1,8 +1,8 @@
 import { Component,OnInit } from '@angular/core';
-import {FormBuilder, FormControl, Validators} from '@angular/forms';
-import {FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, Validators,FormGroup} from '@angular/forms';
 import{LoginService}from 'src/app/maheshreddy/services/login.service';
-import {ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-mahesh-login',
@@ -15,7 +15,7 @@ export class MaheshLoginComponent implements OnInit {
   hide = true;
   loginform!:FormGroup;
   userdata:{}={}
-  constructor( private _loginserve:LoginService,private _fb:FormBuilder){
+  constructor( private _loginserve:LoginService,private _fb:FormBuilder,private _route:Router){
     this.loginform=this._fb.group({
       email:'',
       password:''
@@ -41,12 +41,21 @@ export class MaheshLoginComponent implements OnInit {
       (res)=>
       {
         this.userdata=res;
+        if(res.isAuthenticated==false)
+        {
+          alert("pls enter valide login detaila");
+        }
+        else
+        {
+          alert("login sucessfull");
+         this._route.navigateByUrl('maheshdasboard');
+        }
       }
     )
   }  
   else 
   {
-    alert("please enter details");
+    alert("please enter valid details");
   }
   }
     }

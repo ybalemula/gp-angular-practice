@@ -20,6 +20,11 @@ import { LoginpageService } from './loginpage.service';
 import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatListModule } from '@angular/material/list';
+import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatBadgeModule} from '@angular/material/badge';
+import { MatMenuModule} from '@angular/material/menu';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
 import {MatMenuModule} from '@angular/material/menu';
 import{MatBadgeModule} from '@angular/material/badge';
@@ -35,6 +40,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MohammadComponent,
     SandeepTestComponent,
     DashboardComponent,
+    MaheshdashboardComponent,
     MohammadDashboardComponent,
   ],
   imports: [
@@ -50,6 +56,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HttpClientModule,
     ReactiveFormsModule,
     MatListModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatBadgeModule,
     MatMenuModule,
     MatBadgeModule,
     MatSidenavModule,
@@ -65,6 +74,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
+    MatSidenavModule,
   ],
   bootstrap: [AppComponent],
 })
