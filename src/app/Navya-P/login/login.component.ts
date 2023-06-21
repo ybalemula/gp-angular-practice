@@ -1,7 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,FormControl,Validators} from '@angular/forms'
 import { LoginserviceService } from '../loginservice.service';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit{
       userName='';
       password='';
     
-      constructor(private login:LoginserviceService,private http:HttpClient,private _fb:FormBuilder){};   
+      constructor(private login:LoginserviceService,private http:HttpClient,private _fb:FormBuilder,private router:Router){};   
 
      ngOnInit(): void {
       this.loginForm = this._fb.group({
@@ -37,13 +38,16 @@ export class LoginComponent implements OnInit{
         return;
       }
       this.login.LoginUseData(this.loginForm.value).subscribe(
-        (res)=>{
-          console.log(res);
+        (res:any)=>{
+          localStorage.setItem('token',res.token)
+          // console.log(res.token);
           alert("User Login Sucessfully");
           this.loginForm.reset();
+          this.router.navigate(['/dashboard']);
         },
         (err)=>{
           console.log(err);
+          alert("Login Failed");
         }
       )
      }

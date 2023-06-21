@@ -1,4 +1,13 @@
 <span>{{ title }} app is running!</span>
 <router-outlet></router-outlet>
-<app-login></app-login>
-<app-yadagiri-test></app-yadagiri-test>
+<app-yadagiri-test></app-yadagiri-test> 
+<mat-toolbar color="primary">
+<button mat-button routerLink="/home">Home</button>
+<button mat-button routerLink="/login">Login</button>
+<button mat-button routerLink="/dashboard">Dashboard</button>
+</mat-toolbar>
+<div class="content">
+<router-outlet></router-outlet>  
+</div>
+<!-- <span class="example-spacer"></span>
+<button mat-button routerLink="/login">Login</button> -->

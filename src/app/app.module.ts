@@ -13,15 +13,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HomePageComponent } from './Navya-P/home-page/home-page.component';
+import { DashboardComponent } from './Navya-P/dashboard/dashboard.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTableModule} from '@angular/material/table';
+import { TokeninterceptorService } from './Navya-P/tokeninterceptor.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
     LoginComponent,
+    HomePageComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +44,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatToolbarModule,
     HttpClientModule,
     RouterModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatMenuModule,
+    MatTableModule,
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: TokeninterceptorService,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
