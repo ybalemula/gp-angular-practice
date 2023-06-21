@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit{
           // console.log(res.token);
           alert("User Login Sucessfully");
           this.loginForm.reset();
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/Navyadashboard']);
         },
         (err)=>{
           console.log(err);

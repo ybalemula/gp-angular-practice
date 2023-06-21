@@ -7,7 +7,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit{
+export class NavyaDashboardComponent implements OnInit{
   displayedColumns: string[] = [
     'menuId',
     'moduleName',
