@@ -25,9 +25,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatMenuModule} from '@angular/material/menu';
-
-
-
+import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
+import {MatMenuModule} from '@angular/material/menu';
+import{MatBadgeModule} from '@angular/material/badge';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import{MatAutocompleteModule}  from '@angular/material/autocomplete';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +41,7 @@ import { MatMenuModule} from '@angular/material/menu';
     SandeepTestComponent,
     DashboardComponent,
     MaheshdashboardComponent,
+    MohammadDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,10 @@ import { MatMenuModule} from '@angular/material/menu';
     MatDividerModule,
     MatBadgeModule,
     MatMenuModule,
-
+    MatBadgeModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatTooltipModule
   ],
   providers: [
     LoginService,
