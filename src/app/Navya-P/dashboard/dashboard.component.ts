@@ -9,7 +9,10 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 })
 export class DashboardComponent implements OnInit{
   displayedColumns: string[] = [
-    'menuTitle'
+    'menuId',
+    'moduleName',
+    'menuTitle',
+    'moduleId'
   ]
   dataSource!: MatTableDataSource<any>;
 
