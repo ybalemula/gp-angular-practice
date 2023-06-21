@@ -3,6 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
+import { LoginComponent } from './Navya-P/login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HomePageComponent } from './Navya-P/home-page/home-page.component';
+import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
+import {MatTableModule} from '@angular/material/table';
+import { TokeninterceptorService } from './Navya-P/tokeninterceptor.service';
+
+
 import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -21,10 +32,7 @@ import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.comp
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatListModule } from '@angular/material/list';
 import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
-import {MatBadgeModule} from '@angular/material/badge';
-import { MatMenuModule} from '@angular/material/menu';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
 import {MatMenuModule} from '@angular/material/menu';
 import{MatBadgeModule} from '@angular/material/badge';
@@ -36,16 +44,32 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   declarations: [
     AppComponent,
     YadagiriTestComponent,
+    LoginComponent,
+    HomePageComponent,
+    DashboardComponent,
     MaheshLoginComponent,
     MohammadComponent,
     SandeepTestComponent,
-    DashboardComponent,
+    NavyaDashboardComponent,
     MaheshdashboardComponent,
     MohammadDashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    HttpClientModule,
+    RouterModule,
+    NoopAnimationsModule,
+    MatMenuModule,
+    MatTableModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -59,13 +83,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatSidenavModule,
     MatDividerModule,
     MatBadgeModule,
-    MatMenuModule,
-    MatBadgeModule,
-    MatSidenavModule,
     MatExpansionModule,
     MatTooltipModule
   ],
-  providers: [
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: TokeninterceptorService,multi:true},
     LoginService,
     LoginpageService,
     MatCardModule,
@@ -74,8 +95,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
-    MatSidenavModule,
-  ],
-  bootstrap: [AppComponent],
+    MatSidenavModule,],
+  bootstrap: [AppComponent]
+   
 })
 export class AppModule {}

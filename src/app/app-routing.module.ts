@@ -1,5 +1,10 @@
 import { NgModule,Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './Navya-P/login/login.component';
+import { HomePageComponent } from './Navya-P/home-page/home-page.component';
+import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
+
+
 import { AppComponent } from './app.component';
 import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
 import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
@@ -33,8 +38,11 @@ const routes: Routes = [
     path:'maheshdasboard',
     component:MaheshdashboardComponent,
   },
+  {path:'login',component:LoginComponent},
+  {path:'home',component:HomePageComponent},
+  {path:'Navyadashboard',component:NavyaDashboardComponent}
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
