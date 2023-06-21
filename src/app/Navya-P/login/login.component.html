@@ -1,0 +1,19 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <form [formGroup]="loginForm" (ngSubmit)="LoginUser()" fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field>
+                <!-- <i class="material-icons prefix">account_circle</i> -->
+              <input matInput  placeholder="UserName" formControlName="userName" required>
+              <mat-error *ngIf="this.loginForm.get('userName')?.touched && this.loginForm.get('userName')?.hasError('required')">UserName is Required</mat-error>
+            </mat-form-field>
+          
+            <mat-form-field>
+                <!-- <i class="material-icons prefix">vpn_key</i> -->
+                <input matInput type="password" placeholder="Password" formControlName="password" required>
+                <mat-error *ngIf="this.loginForm.get('password')?.touched && this.loginForm.get('password')?.hasError('required')">Password is Required</mat-error>
+              </mat-form-field>
+              <button mat-raised-button  color="primary" type="submit">Login</button>
+          </form>
+    </mat-card>
+</div>
