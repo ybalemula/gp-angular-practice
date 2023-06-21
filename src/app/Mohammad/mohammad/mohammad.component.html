@@ -1,0 +1,26 @@
+<p>mohammad works!</p>
+<h1>mohammad Ziauddin</h1>
+<h1> welcome</h1>
+<form name="LoginPage" #name="ngForm" (ngSubmit)="Issubmitted=true;name.valid;Login()" [formGroup]="LoginPage">
+    <div>
+        <label>Username</label>
+        <input formControlName="Username" required  >
+        <span *ngIf="LoginPage.get('Username')!.errors && LoginPage.get('Username')!.hasError('required') && Issubmitted" style="color: red;">Required</span>
+        <!-- <span *ngIf="LoginPage.get('Email')!.errors && LoginPage.get('Email')!.hasError('pattern') && Issubmitted" style="color: red;">Email is Not Valid</span> -->
+    
+    </div>
+    <br>
+    <div>
+        <label>Password</label>
+        <input formControlName="Password" type="password" required maxlength="15">
+        <span *ngIf="LoginPage.get('Password')!.errors && LoginPage.get('Password')!.hasError('required') && Issubmitted" style="color: red;">required</span>
+   
+    </div>
+    <div>
+        <span *ngIf="Showerror">Username is Invalid</span>
+    </div>
+    <div>
+        <button type="submit">submit</button>
+    </div>
+</form>
+
