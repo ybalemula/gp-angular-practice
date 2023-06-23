@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./maheshdashboard.component.scss']
 })
 export class MaheshdashboardComponent {
-
+  opened=false;
 }
