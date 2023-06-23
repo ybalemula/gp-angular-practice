@@ -10,10 +10,8 @@ import { RouterModule } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './Navya-P/home-page/home-page.component';
 import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { TokeninterceptorService } from './Navya-P/tokeninterceptor.service';
-
-
 import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -32,12 +30,11 @@ import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.comp
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatListModule } from '@angular/material/list';
 import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatMenuModule } from '@angular/material/menu';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
-import {MatMenuModule} from '@angular/material/menu';
-import{MatBadgeModule} from '@angular/material/badge';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import{MatAutocompleteModule}  from '@angular/material/autocomplete';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
@@ -84,9 +81,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatDividerModule,
     MatBadgeModule,
     MatExpansionModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: TokeninterceptorService,multi:true},
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokeninterceptorService,
+      multi: true,
+    },
     LoginService,
     LoginpageService,
     MatCardModule,
@@ -95,8 +97,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
-    MatSidenavModule,],
-  bootstrap: [AppComponent]
-   
+    MatSidenavModule,
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
