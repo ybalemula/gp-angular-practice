@@ -9,7 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
 import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
-
+import{UsersComponent} from './Mohammad/users/users/users.component'
 const routes: Routes = [
   {
     path: '',
@@ -42,6 +42,7 @@ const routes: Routes = [
   { path: 'navya', component: NavyaDashboardComponent },
   { path: 'nvayalogin', component: LoginComponent },
   { path: 'navyahome', component: HomePageComponent },
+  { path: 'mohammadusers', component: UsersComponent },
 ];
 
 @NgModule({

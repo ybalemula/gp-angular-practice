@@ -1,0 +1,67 @@
+<p>users works!</p>
+<h1>{{title}}</h1>
+
+
+<form [formGroup]="UserprofileForm" (ngSubmit)="Submit()">
+    <label>
+        Firstname : <input type="text" formControlName="FirstName" [ngModel]="UserprofileForm.value.FirstName" name="FirstName">
+        <span></span>
+    </label>
+    <br>
+    <label>
+        LastName : <input type="text" formControlName="LastName" [ngModel]="UserprofileForm.value.LastName" name="LastName">
+    </label>
+    <br>
+    <label>
+        Gender : <input type="radio" formControlName="Gender" [ngModel]="UserprofileForm.value.Gender" name="Gender" value="M">Male
+        <input type="radio" formControlName="Gender" [ngModel]="UserprofileForm.value.Gender" name="Gender" value="F">Female
+    </label>
+    <br>
+    <label>
+        Select Your Role: <select formControlName="Role" [ngModel]="UserprofileForm.value.Role" name="Role">
+            <option value="">--Select--</option>
+            <option *ngFor="let R of Roles" [ngValue]="R.id">{{R.name}}</option>
+        </select>
+    </label>
+    <br>
+    <label>
+        Select Your Country: <select formControlName="Country" name="Country" [ngModel]="UserprofileForm.value.Country"
+            (change)="Selectstate(UserprofileForm.value.Country)">
+            <option value="">--Select--</option>
+            <option *ngFor="let c of Country" [ngValue]="c.conid">{{c.name}}</option>
+        </select>
+    </label>
+    <br>
+    <label>
+        Select Your State: <select formControlName="State" (change)="selectcity(UserprofileForm.value.State)"
+        [ngModel]="UserprofileForm.value.State" name="State">
+            <option value="">--Select--</option>
+            <option *ngFor="let s of state" [ngValue]="s.stid">{{s.name}}</option>
+        </select>
+    </label>
+    <br>
+    <label>
+        Select Your City: <select formControlName="City" name="City"  [ngModel]="UserprofileForm.value.City">
+            <option value="">--Select--</option>
+            <option *ngFor="let ci of city" [ngValue]="ci.cityid">{{ci.name}}</option>
+        </select>
+    </label>
+    <br>
+    <label>
+        Email : <input type="text" formControlName="Email" name="Email" [ngModel]="UserprofileForm.value.Email">
+    </label>
+    <br>
+    <label>
+        Mobile : <input type="text" formControlName="Mobile" name="Mobile" [ngModel]="UserprofileForm.value.Mobile">
+    </label>
+    <br>
+    <label>
+        Address : <textarea formControlName="Address" name="Address" [ngModel]="UserprofileForm.value.Address"></textarea>
+    </label>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<br>
+<p>
+    <app-child [ChildData]="ParentData" (editdataevent)="editdata($event)"></app-child>
+</p>
