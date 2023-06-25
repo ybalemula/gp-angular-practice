@@ -37,6 +37,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { UsersComponent } from './Mohammad/users/users/users.component';
+import { ChildComponent } from './Mohammad/Child/child/child.component';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +53,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     NavyaDashboardComponent,
     MaheshdashboardComponent,
     MohammadDashboardComponent,
+    UsersComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,6 +87,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatBadgeModule,
     MatExpansionModule,
     MatTooltipModule,
+    MatPaginatorModule
   ],
   providers: [
     {
