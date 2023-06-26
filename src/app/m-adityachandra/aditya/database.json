@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "employeeName": "Aditya",
+      "employeeSalary": 10000,
+      "joinedDate": "2023-06-20",
+      "contactNo": 9849653592,
+      "emailID": "adityachandra.m@gmail.com",
+      "jobRole": "Developerr",
+      "id": 1
+    },
+    {
+      "employeeName": "Chandra",
+      "employeeSalary": "50000",
+      "joinedDate": "2023-06-21",
+      "contactNo": 9849657398,
+      "emailID": "chandra.aditya@gmail.com",
+      "jobRole": "Developer",
+      "id": 2
+    },
+    {
+      "employeeName": "Naresh",
+      "employeeSalary": "50000",
+      "joinedDate": "2023-06-22",
+      "contactNo": 48992891,
+      "emailID": "naresh@gmail.com",
+      "jobRole": "Deveoper",
+      "id": 4
+    },
+    {
+      "employeeName": "Nagarjuna",
+      "employeeSalary": "50000",
+      "joinedDate": "2023-06-21",
+      "contactNo": 985992929,
+      "emailID": "nagarjuna@gmail.com",
+      "jobRole": "Developer2",
+      "id": 5
+    },
+    {
+      "employeeName": "Srikanth",
+      "employeeSalary": "50000",
+      "joinedDate": "2023-06-22",
+      "contactNo": 8919819189,
+      "emailID": "srikanth@gmail.com",
+      "jobRole": "Developer3",
+      "id": 6
+    }
+  ]
+}

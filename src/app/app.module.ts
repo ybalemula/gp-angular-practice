@@ -6,7 +6,10 @@ import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,12 +35,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { UsersComponent } from './Mohammad/users/users/users.component';
 import { ChildComponent } from './Mohammad/Child/child/child.component';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MaheshReddyModule } from './maheshreddy/maheshreddy.module';
 import { MaterialModule } from './material.module';
 import { MaheshReddyRoutingModule } from './maheshreddy/maheshreddy-routing.module';
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.module';
+import { AdityaModule } from './m-adityachandra/aditya/aditya.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +90,8 @@ import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.mo
     MaterialModule,
     MaheshReddyRoutingModule,
     NavyaModuleModule,
-    NavyaModuleRoutingModule
+    NavyaModuleRoutingModule,
+    AdityaModule,
   ],
   providers: [
     LoginService,
