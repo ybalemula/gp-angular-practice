@@ -4,10 +4,8 @@ import { LoginComponent } from './Navya-P/login/login.component';
 import { HomePageComponent } from './Navya-P/home-page/home-page.component';
 import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
 import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
-import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
-import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
 import{UsersComponent} from './Mohammad/users/users/users.component'
 const routes: Routes = [
@@ -20,24 +18,11 @@ const routes: Routes = [
     component: YadagiriTestComponent,
   },
   {
+    path: "mahesh", loadChildren: () => import('./maheshreddy/maheshreddy.module').then(m => m.MaheshReddyModule),
+  },
+  {
     path: 'mohammad',
     component: MohammadComponent,
-  },
-  {
-    path: 'mahesh',
-    component: MaheshdashboardComponent,
-  },
-  {
-    path: 'mahesh/dashboard',
-    component: MaheshdashboardComponent,
-  },
-  {
-    path: 'mohammaddashboard',
-    component: MohammadDashboardComponent,
-  },
-  {
-    path: 'mahesh/login',
-    component: MaheshLoginComponent,
   },
   { path: 'navya', component: NavyaDashboardComponent },
   { path: 'nvayalogin', component: LoginComponent },

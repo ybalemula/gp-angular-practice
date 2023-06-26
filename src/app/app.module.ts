@@ -7,13 +7,11 @@ import { LoginComponent } from './Navya-P/login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './Navya-P/home-page/home-page.component';
 import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { TokeninterceptorService } from './Navya-P/tokeninterceptor.service';
-import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -29,7 +27,6 @@ import { LoginpageService } from './loginpage.service';
 import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatListModule } from '@angular/material/list';
-import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -40,6 +37,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { UsersComponent } from './Mohammad/users/users/users.component';
 import { ChildComponent } from './Mohammad/Child/child/child.component';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { MaheshReddyModule } from './maheshreddy/maheshreddy.module';
+import { MaterialModule } from './material.module';
+import { MaheshReddyRoutingModule } from './maheshreddy/maheshreddy-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,11 +47,9 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
     LoginComponent,
     HomePageComponent,
     DashboardComponent,
-    MaheshLoginComponent,
     MohammadComponent,
     SandeepTestComponent,
     NavyaDashboardComponent,
-    MaheshdashboardComponent,
     MohammadDashboardComponent,
     UsersComponent,
     ChildComponent,
@@ -87,7 +85,10 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
     MatBadgeModule,
     MatExpansionModule,
     MatTooltipModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MaheshReddyModule,
+    MaterialModule,
+    MaheshReddyRoutingModule
   ],
   providers: [
     {

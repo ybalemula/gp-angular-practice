@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MaheshLoginComponent } from '../maheshreddy/mahesh-login/mahesh-login.component';
+import { MaheshLoginComponent } from '../maheshreddy/components/mahesh-login/mahesh-login.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
