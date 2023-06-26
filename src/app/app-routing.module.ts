@@ -1,14 +1,15 @@
-import { NgModule,Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { LoginComponent } from './Navya-P/login/login.component';
+import { HomePageComponent } from './Navya-P/home-page/home-page.component';
+import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
 import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
 import { MaheshLoginComponent } from './maheshreddy/mahesh-login/mahesh-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
-
 import { MaheshdashboardComponent } from './maheshreddy/maheshdashboard/maheshdashboard.component';
-import{MohammadDashboardComponent} from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component'
-
+import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
+import{UsersComponent} from './Mohammad/users/users/users.component'
 const routes: Routes = [
   {
     path: '',
@@ -24,15 +25,24 @@ const routes: Routes = [
   },
   {
     path: 'mahesh',
-    component: MaheshLoginComponent,
-  }, {
+    component: MaheshdashboardComponent,
+  },
+  {
+    path: 'mahesh/dashboard',
+    component: MaheshdashboardComponent,
+  },
+  {
     path: 'mohammaddashboard',
     component: MohammadDashboardComponent,
   },
   {
-    path:'maheshdasboard',
-    component:MaheshdashboardComponent,
+    path: 'mahesh/login',
+    component: MaheshLoginComponent,
   },
+  { path: 'navya', component: NavyaDashboardComponent },
+  { path: 'nvayalogin', component: LoginComponent },
+  { path: 'navyahome', component: HomePageComponent },
+  { path: 'mohammadusers', component: UsersComponent },
 ];
 
 @NgModule({
