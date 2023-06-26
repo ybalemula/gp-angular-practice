@@ -1,13 +1,8 @@
-import { Component,OnInit, CUSTOM_ELEMENTS_SCHEMA, ViewChild  } from '@angular/core';
+import { Component,OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { Router } from "@angular/router";
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule, FloatLabelType } from '@angular/material/form-field';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import{ChildComponent} from 'src/app/Mohammad/Child/child/child.component'
+import{ChildComponent} from 'src/app/mohammad-module/components/Child/child/child.component';
+import {DataserviceService} from 'src/app/mohammad-module/Service/dataservice.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -15,12 +10,10 @@ import{ChildComponent} from 'src/app/Mohammad/Child/child/child.component'
 })
 export class UsersComponent {
   title='Users Form'
-
-
   ParentData: any = {};
   DataList:any[]=[];
   @ViewChild(ChildComponent) ViewData!: ChildComponent
-  constructor() { }
+  constructor(private dataService:DataserviceService) { }
   UserprofileForm = new FormGroup({
     FirstName: new FormControl('', Validators.required),
     LastName: new FormControl('', Validators.required),

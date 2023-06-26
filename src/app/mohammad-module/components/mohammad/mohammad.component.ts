@@ -31,7 +31,7 @@ export class MohammadComponent implements OnInit {
         (res) => {
           if (res.token) {
             this.userdata = res;
-            this.router.navigate(['mohammaddashboard']);
+            this.router.navigate(['mohammad/dashboard']);
             this.Showerror = false;
           }
           else {
