@@ -3,15 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
-import { LoginComponent } from './Navya-P/login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageComponent } from './Navya-P/home-page/home-page.component';
-import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
 import { MatTableModule } from '@angular/material/table';
-import { TokeninterceptorService } from './Navya-P/tokeninterceptor.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -40,16 +36,15 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MaheshReddyModule } from './maheshreddy/maheshreddy.module';
 import { MaterialModule } from './material.module';
 import { MaheshReddyRoutingModule } from './maheshreddy/maheshreddy-routing.module';
+import { NavyaModuleModule } from './navya-module/navya-module.module';
+import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
-    LoginComponent,
-    HomePageComponent,
     DashboardComponent,
     MohammadComponent,
     SandeepTestComponent,
-    NavyaDashboardComponent,
     MohammadDashboardComponent,
     UsersComponent,
     ChildComponent,
@@ -88,14 +83,11 @@ import { MaheshReddyRoutingModule } from './maheshreddy/maheshreddy-routing.modu
     MatPaginatorModule,
     MaheshReddyModule,
     MaterialModule,
-    MaheshReddyRoutingModule
+    MaheshReddyRoutingModule,
+    NavyaModuleModule,
+    NavyaModuleRoutingModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokeninterceptorService,
-      multi: true,
-    },
     LoginService,
     LoginpageService,
     MatCardModule,

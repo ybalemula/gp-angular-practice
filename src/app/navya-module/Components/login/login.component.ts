@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,FormControl,Validators} from '@angular/forms'
-import { LoginserviceService } from '../loginservice.service';
+import { LoginserviceService } from '../../services/login-service/loginservice.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit{
           // console.log(res.token);
           alert("User Login Sucessfully");
           this.loginForm.reset();
-          this.router.navigate(['/Navyadashboard']);
+          this.router.navigate(['/navya']);
         },
         (err)=>{
           console.log(err);

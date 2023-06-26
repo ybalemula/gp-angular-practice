@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TokeninterceptorService } from './tokeninterceptor.service';
+import { TokeninterceptorService } from '../Token-interceptor/tokeninterceptor.service';
 
 describe('TokeninterceptorService', () => {
   let service: TokeninterceptorService;
