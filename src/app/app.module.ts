@@ -40,6 +40,9 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { MaheshReddyModule } from './maheshreddy/maheshreddy.module';
 import { MaterialModule } from './material.module';
 import { MaheshReddyRoutingModule } from './maheshreddy/maheshreddy-routing.module';
+import { DineshModule } from './dinesh/dinesh.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +56,7 @@ import { MaheshReddyRoutingModule } from './maheshreddy/maheshreddy-routing.modu
     MohammadDashboardComponent,
     UsersComponent,
     ChildComponent,
+   
   ],
   imports: [
     BrowserModule,

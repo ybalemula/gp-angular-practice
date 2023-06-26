@@ -8,6 +8,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
 import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
 import{UsersComponent} from './Mohammad/users/users/users.component'
+import { DLoginComponent } from './dinesh/d-login/d-login.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -28,6 +30,7 @@ const routes: Routes = [
   { path: 'nvayalogin', component: LoginComponent },
   { path: 'navyahome', component: HomePageComponent },
   { path: 'mohammadusers', component: UsersComponent },
+  { path: 'Dinesh', component: DLoginComponent }
 ];
 
 @NgModule({

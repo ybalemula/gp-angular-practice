@@ -1,0 +1,20 @@
+
+
+<div class="container">
+   <form  [formGroup]="userDetails"  >
+      <div class="row">
+         <div class="col">
+                    <input type="text" placeholder="first name" class="form-control" formControlName="firstname" >
+          </div>
+          <div class="col">
+                    <input type="text" placeholder="last name" class="form-control" formControlName="lastname">
+          </div>
+          <div class="col">
+                    <input type="text" placeholder="place" class="form-control" formControlName="place">
+          </div>
+      </div>
+   </form>
+          <div class="row mt-2">
+                    <button type="submit" (click)="submit1()">submit</button>
+          </div>
+</div>
