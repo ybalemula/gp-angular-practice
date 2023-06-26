@@ -1,5 +1,5 @@
 import { Component,OnInit} from '@angular/core';
-import { DashboardServiceService } from '../dashboard-service.service';
+import { DashboardServiceService } from '../../services/dashboard-service/dashboard-service.service';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 @Component({
