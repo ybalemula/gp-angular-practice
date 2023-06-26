@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
-import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
-import{UsersComponent} from './Mohammad/users/users/users.component'
 const routes: Routes = [
   {
     path: '',
@@ -19,9 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'mohammad',
-    component: MohammadComponent,
+    loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
-  { path: 'mohammadusers', component: UsersComponent },
+  
 ];
 
 @NgModule({
