@@ -24,6 +24,7 @@ import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.mo
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
 import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
+import { NareshComponent } from './Naresh/naresh/naresh.component';
 import { DineshModule } from './dinesh/dinesh.module';
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DineshModule } from './dinesh/dinesh.module';
     YadagiriTestComponent,
     DashboardComponent,
     SandeepTestComponent,
+    NareshComponent
   ],
   imports: [
     BrowserModule,
