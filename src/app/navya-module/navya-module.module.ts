@@ -9,16 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material.module';
-
-
 import { NavyaModuleRoutingModule } from './navya-module-routing.module';
+import { UsersDataComponent } from './Components/users-data/users-data.component';
 
 
 @NgModule({
   declarations: [
     NavyaDashboardComponent,
     LoginComponent,
-    HomePageComponent
+    HomePageComponent,
+    UsersDataComponent
   ],
   imports: [
     CommonModule,
