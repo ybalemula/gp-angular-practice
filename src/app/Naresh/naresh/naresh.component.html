@@ -1,1 +1,64 @@
-<p>naresh works!</p>
+
+<div class="add">
+          <button (click)="add()">Add Employe</button>
+</div>
+<div class="center" *ngIf="show">
+
+
+<form [formGroup]="dataobj">
+          <h3 style="color: green;text-align: center;">Login Page</h3>
+          <table>
+              <tr>
+                  <td><label>Enater Name:</label></td>
+                  <td><input type="text" formControlName="name"></td>
+              </tr>
+              <tr>
+                  <td><label>Select Gender:</label></td>
+                  <td> Male <input type="radio" name="gender" value="Male" formControlName="gender">
+                  Female<input type="radio" name="gender" value="female" formControlName="gender"></td>
+              </tr>
+              <tr>
+                  <td>  <label>Select Location:</label>      </td>
+                  <td> <select formControlName="loaction">
+                      <option value="">-Select-</option>
+                      <option value="HYD">HYD</option>
+                      <option value="Guntur">Guntur</option>
+                      <option value="Vizag">Vizag</option>
+                  </select></td>
+              </tr>
+              <tr>
+                  <td><label>Enter Cell Number:</label></td>
+                  <td><input type="number" formControlName="cellnumber"></td>
+              </tr>
+          </table><br><br>
+          <div style="text-align:center;">
+                    <button (click)="Insert()" [disabled]="dataobj.invalid"  class="btn btn-primary">{{btnname}}</button>
+                    <button (click)="cancel()">Cansel</button>
+          </div>     
+      </form>
+</div>
+<div class="maindiv">
+          <table id="table2" class="table table-striped" border="1" >
+              <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Location</th>
+                  <th>Cell Number</th>
+                  <th>Action</th>
+                  
+              </tr>
+              <tbody *ngFor="let resltobj of emptotdata">
+                  <tr>
+                      <td>{{resltobj.id}}</td>
+                      <td>{{resltobj.name}}</td>
+                      <td>{{resltobj.gender}}</td>
+                      <td>{{resltobj.loaction}}</td>
+                      <td>{{resltobj.cellnumber}}</td>
+                      <td><button (click)="deletee(resltobj.id)">Delete</button></td>
+                      <td><button (click)="edit(resltobj)">Edit</button></td>
+                  </tr>
+              </tbody>
+          </table>
+          <!-- <app-maincomponent [result]="emptotdata" ></app-maincomponent> -->
+      </div>

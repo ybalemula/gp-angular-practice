@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
 import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component';
 import { NareshComponent } from './Naresh/naresh/naresh.component';
+import { DLoginComponent } from './dinesh/d-login/d-login.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +22,8 @@ const routes: Routes = [
     loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
   { path: 'Sandeep', component: SandeepTestComponent },
-  { path: 'Naresh', component: NareshComponent }
+  { path: 'Naresh', component: NareshComponent },
+   {path:'dinesh',component:DLoginComponent}
 ];
 
 @NgModule({

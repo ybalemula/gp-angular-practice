@@ -25,6 +25,7 @@ import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
 import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
 import { NareshComponent } from './Naresh/naresh/naresh.component';
+import { DineshModule } from './dinesh/dinesh.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { NareshComponent } from './Naresh/naresh/naresh.component';
     MohammadModuleRoutingModule,
     MohammadModuleModule,
     AdityaModule,
+    DineshModule
   ],
   providers: [
     {
