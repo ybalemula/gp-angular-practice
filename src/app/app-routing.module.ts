@@ -19,7 +19,7 @@ const routes: Routes = [
     path: 'mohammad',
     loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
-  { path: 'SandeepTestComponent', component: SandeepTestComponent }
+  { path: 'Sandeep', component: SandeepTestComponent }
 ];
 
 @NgModule({
