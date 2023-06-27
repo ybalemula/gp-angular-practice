@@ -1,15 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './Navya-P/login/login.component';
-import { HomePageComponent } from './Navya-P/home-page/home-page.component';
-import { NavyaDashboardComponent } from './Navya-P/dashboard/dashboard.component';
-import { MohammadComponent } from './Mohammad/mohammad/mohammad.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { YadagiriTestComponent } from './b-yadagiri/yadagiri-test/yadagiri-test.component';
-import { MohammadDashboardComponent } from './Mohammad/mohammad/MohammadDashboard/mohammad-dashboard/mohammad-dashboard.component';
-import{UsersComponent} from './Mohammad/users/users/users.component'
+import { SandeepTestComponent } from './g-sandeep/sandeep-test/sandeep-test.component';
 import { DLoginComponent } from './dinesh/d-login/d-login.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -24,13 +18,10 @@ const routes: Routes = [
   },
   {
     path: 'mohammad',
-    component: MohammadComponent,
+    loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
-  { path: 'navya', component: NavyaDashboardComponent },
-  { path: 'nvayalogin', component: LoginComponent },
-  { path: 'navyahome', component: HomePageComponent },
-  { path: 'mohammadusers', component: UsersComponent },
-  { path: 'Dinesh', component: DLoginComponent }
+  { path: 'Sandeep', component: SandeepTestComponent },
+  {path:'dinesh',component:DLoginComponent}
 ];
 
 @NgModule({
