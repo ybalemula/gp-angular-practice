@@ -24,12 +24,14 @@ import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.mo
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
 import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
+import { NareshComponent } from './Naresh/naresh/naresh.component';
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
     DashboardComponent,
     SandeepTestComponent,
+    NareshComponent
   ],
   imports: [
     BrowserModule,
