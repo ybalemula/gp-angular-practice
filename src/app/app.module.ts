@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { LoginService } from 'src/app/maheshreddy/services/login.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,12 +23,13 @@ import { MohammadModuleModule } from './mohammad-module/mohammad-module.module';
 import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.module';
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
+import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
     DashboardComponent,
-    SandeepTestComponent
+    SandeepTestComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import { TokeninterceptorService } from './navya-module/services/Token-intercept
     NavyaModuleModule,
     NavyaModuleRoutingModule,
     MohammadModuleRoutingModule,
-    MohammadModuleModule
+    MohammadModuleModule,
+    AdityaModule,
   ],
   providers: [
     {
@@ -59,4 +64,4 @@ import { TokeninterceptorService } from './navya-module/services/Token-intercept
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
