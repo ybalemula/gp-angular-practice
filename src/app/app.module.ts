@@ -24,12 +24,15 @@ import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.mo
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
 import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
+import { PranayModule } from './U-Pranay/pranay/pranay.module';
+import { HomeComponent } from './U-Pranay/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
     DashboardComponent,
     SandeepTestComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
     MohammadModuleRoutingModule,
     MohammadModuleModule,
     AdityaModule,
+    PranayModule
   ],
   providers: [
     {
