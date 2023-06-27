@@ -1,0 +1,70 @@
+<form (ngSubmit)="SaveOrUpdate()" [formGroup]="Form">
+  <h2>Employee Form</h2>
+  <div class="row">
+    <label>EmployeeName</label>
+    <input
+      type="text"
+      name="employeeName"
+      placeholder="Enter Name"
+      formControlName="employeeName"
+    />
+  </div>
+  <div class="row">
+    <label>Employee Salary</label>
+    <input
+      type="text"
+      name="employeeSalary"
+      placeholder="Enter Salary"
+      formControlName="employeeSalary"
+    />
+  </div>
+  <div class="row">
+    <label>JoinedDate</label>
+    <input
+      type="date"
+      name="joinedDate"
+      placeholder="Enter JoinedDate"
+      formControlName="joinedDate"
+    />
+  </div>
+  <div class="row">
+    <label>Contact No</label>
+    <input
+      type="number"
+      name="contactNo"
+      placeholder="Enter ContactNo"
+      formControlName="contactNo"
+    />
+  </div>
+  <div class="row">
+    <label>EmailID</label>
+    <input
+      type="text"
+      name="emailID"
+      placeholder="Enter EmailID"
+      formControlName="emailID"
+    />
+  </div>
+  <div class="row">
+    <label>Job Role</label>
+    <input
+      type="text"
+      name="jobRole"
+      placeholder="Enter JobRole"
+      formControlName="jobRole"
+    />
+  </div>
+  <div class="row">
+    <button class="btn btn-sm btn-success" [disabled]="this.Form.invalid">
+      {{ this.editID ? "Update" : "Submit" }}
+    </button>
+    |
+    <button
+      class="btn btn-sm btn-warning"
+      *ngIf="this.editID"
+      (click)="Cancel()"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
