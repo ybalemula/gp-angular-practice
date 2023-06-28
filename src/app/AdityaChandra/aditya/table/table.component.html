@@ -1,0 +1,29 @@
+<h1 style="font-weight: bold" class="text-success">EmployeeList</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Employee Salary</th>
+      <th>Joined Date</th>
+      <th>Contact No</th>
+      <th>EmailID</th>
+      <th>Job Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of EmployeeList; let i = index">
+      <td>{{ employee.employeeName }}</td>
+      <td>{{ employee.employeeSalary }}</td>
+      <td>{{ employee.joinedDate }}</td>
+      <td>{{ employee.contactNo }}</td>
+      <td>{{ employee.emailID }}</td>
+      <td>{{ employee.jobRole }}</td>
+      <td>
+        <button (click)="edit(employee.id)">Edit</button>
+      </td>
+      <td>
+        <button (click)="delete(employee.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
