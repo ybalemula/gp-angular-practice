@@ -24,7 +24,8 @@ import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.mo
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
 import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
-import { NareshComponent } from './Naresh/naresh/naresh.component';
+import { NareshModule } from './Naresh/naresh.module';
+import { NareshRoutingModule } from './Naresh/naresh-routing.module';
 import { DineshModule } from './dinesh/dinesh.module';
 import { PranayModule } from './U-Pranay/pranay/pranay.module';
 import { HomeComponent } from './U-Pranay/home/home.component';
@@ -35,8 +36,8 @@ import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
     AppComponent,
     YadagiriTestComponent,
     DashboardComponent,
-    SandeepTestComponent,
-    NareshComponent
+    SandeepTestComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -58,6 +59,9 @@ import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
     MohammadModuleModule,
     AdityaModule,
     DineshModule,
+    PranayModule,
+    NareshModule,
+    NareshRoutingModule,
     DineshRoutingModule,
     PranayModule
   ],
