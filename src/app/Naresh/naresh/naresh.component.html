@@ -32,8 +32,8 @@
               </tr>
           </table><br><br>
           <div style="text-align:center;">
-                    <button (click)="Insert()" [disabled]="dataobj.invalid"  class="btn btn-primary">{{btnname}}</button>
-                    <button (click)="cancel()">Cansel</button>
+                    <button (click)="Insert()" [disabled]="dataobj.invalid"  class="btn btn-success">{{btnname}}</button>
+                    <button (click)="cancel()" class="btn btn-warning">Cansel</button>
           </div>     
       </form>
 </div>
@@ -55,8 +55,8 @@
                       <td>{{resltobj.gender}}</td>
                       <td>{{resltobj.loaction}}</td>
                       <td>{{resltobj.cellnumber}}</td>
-                      <td><button (click)="deletee(resltobj.id)">Delete</button></td>
-                      <td><button (click)="edit(resltobj)">Edit</button></td>
+                      <td><button (click)="deletee(resltobj.id)" class="btn btn-danger"><span class="bi bi-trash"></span>Delete</button></td>
+                      <td><button (click)="edit(resltobj)" class="btn btn-primary"><span class="bi bi-pencil"></span>Edit</button></td>
                   </tr>
               </tbody>
           </table>
