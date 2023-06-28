@@ -26,6 +26,8 @@ import { TokeninterceptorService } from './navya-module/services/Token-intercept
 import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
 import { NareshComponent } from './Naresh/naresh/naresh.component';
 import { DineshModule } from './dinesh/dinesh.module';
+import { PranayModule } from './U-Pranay/pranay/pranay.module';
+import { HomeComponent } from './U-Pranay/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,8 @@ import { DineshModule } from './dinesh/dinesh.module';
     MohammadModuleRoutingModule,
     MohammadModuleModule,
     AdityaModule,
-    DineshModule
+    DineshModule,
+    PranayModule
   ],
   providers: [
     {
