@@ -1,1 +1,5 @@
-<h1> pranay component works</h1>
+<mat-form-field>
+       <mat-label>Username</mat-label>   
+       <input type="text" ngModel name="uname" #uname="ngModel" placeholder="Username">
+</mat-form-field>
+<span>{{uname.value}}</span>
