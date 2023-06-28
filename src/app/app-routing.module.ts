@@ -22,7 +22,11 @@ const routes: Routes = [
     loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
   { path: 'Sandeep', component: SandeepTestComponent },
-   {path:'dinesh',component:DLoginComponent}
+   {path:'dinesh',component:DLoginComponent},
+   {
+    path: 'Nagarjuna',
+    loadChildren: () => import('./nagarjuna-b/nagarjuna.module').then(m => m.NagarjunaModule)
+  },
 ];
 
 @NgModule({
