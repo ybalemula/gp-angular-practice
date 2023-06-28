@@ -22,7 +22,6 @@ const routes: Routes = [
     loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
   { path: 'Sandeep', component: SandeepTestComponent },
-  { path: 'Naresh', component: NareshComponent },
    {path:'dinesh',component:DLoginComponent}
 ];
 
