@@ -27,7 +27,7 @@ import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
 import { NareshComponent } from './Naresh/naresh/naresh.component';
 import { DineshModule } from './dinesh/dinesh.module';
 import { PranayModule } from './U-Pranay/pranay/pranay.module';
-import { HomeComponent } from './U-Pranay/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
