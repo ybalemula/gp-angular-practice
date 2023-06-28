@@ -28,6 +28,8 @@ import { NareshComponent } from './Naresh/naresh/naresh.component';
 import { DineshModule } from './dinesh/dinesh.module';
 import { PranayModule } from './U-Pranay/pranay/pranay.module';
 import { HomeComponent } from './U-Pranay/home/home.component';
+import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +58,7 @@ import { HomeComponent } from './U-Pranay/home/home.component';
     MohammadModuleModule,
     AdityaModule,
     DineshModule,
+    DineshRoutingModule,
     PranayModule
   ],
   providers: [
