@@ -55,7 +55,7 @@ import { HomeComponent } from './U-Pranay/home/home.component';
     MohammadModuleRoutingModule,
     MohammadModuleModule,
     AdityaModule,
-    DineshModule
+    DineshModule,
     PranayModule
   ],
   providers: [
