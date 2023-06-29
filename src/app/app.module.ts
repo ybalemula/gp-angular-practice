@@ -31,6 +31,8 @@ import { PranayModule } from './U-Pranay/pranay/pranay.module';
 import { SrikanthModule } from './t-srikanth/srikanth.module';
 import { SrikanthRoutingModule } from './t-srikanth/srikanth/srikanth-routing.module';
 import { CreateRegistrationComponent } from './t-srikanth/components/create-registration/create-registration.component';
+import { HomeComponent } from './U-Pranay/home/home.component';
+import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { CreateRegistrationComponent } from './t-srikanth/components/create-regi
     NareshModule,
     NareshRoutingModule,
     SrikanthModule,
-    SrikanthRoutingModule
+    SrikanthRoutingModule,
+    DineshRoutingModule,
+    PranayModule
   ],
   providers: [
     {

@@ -1,0 +1,12 @@
+<h1>Angular practice</h1>
+<input type="date" [min]="minDate" [max]="maxDate" [(ngModel)]="selectedDate">
+<span>{{"Your selected date is:"+selectedDate}}</span><br><br>
+
+<input type="date" [(ngModel)]="startdate">
+
+<input type="date"  [(ngModel)]="enddate">
+
+<button (click)="calculatedays()">Calculate Days</button>
+
+<span>{{"Days between two dates is:"+totalDays}}</span>
+

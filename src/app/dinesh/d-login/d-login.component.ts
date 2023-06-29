@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class DLoginComponent {
   userDetails:FormGroup;
-  constructor(){
+  constructor(private r:Router){
     this.userDetails = new FormGroup({
       firstname:new FormControl('',[Validators.required]),  
       lastname:new FormControl('',[Validators.required]),
@@ -18,6 +19,6 @@ export class DLoginComponent {
   }
 
   submit1(){
-    console.log(this.userDetails)
+    this.r.navigate(["/signup"])
   }
 }
