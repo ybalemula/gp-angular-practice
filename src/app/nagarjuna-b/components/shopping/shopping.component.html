@@ -1,1 +1,19 @@
-<p>shopping works!</p>
+<div class="container-fluid" row>
+          <nav class="col-3">
+           <app-child (Filterchange)="categoryselect($event)"(Filterclicked)="categorychanged($event)" [Electronicscount]="Electronicscount" [Jewelerycount]="Jewelerycount" [MensClothingcount]="MensClothingcount" [WomensClothingcount]="WomensClothingcount"></app-child>
+          </nav>
+          <main class="col-9">
+              <div class="d-flex flex-wrap overflow-auto" style="height:500px">
+                  <div *ngFor="let item of products" class="card m-2 p-2" style="width:200px;">
+                      <img [src]= item.image height="180" class="card-img-top">
+                      <div class="card-header" style="height: 160px;">
+                          <p>{{item.title}}</p>
+                      </div>
+      
+                  </div>
+      
+              </div>
+          </main>
+      
+      </div>
+      

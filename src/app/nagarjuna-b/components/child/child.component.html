@@ -1,0 +1,15 @@
+<div>
+          <ul class="list-unstyled">
+              <li><button name="electronics" (click)="Buttonclicked($event)" class="btn btn-link">Electronics[{{Electronicscount}}]</button></li>
+              <li><button  name="Jewelery" (click)="Buttonclicked($event)" class="btn btn-link">Jewelery[{{Jewelerycount}}]</button></li>
+              <li><button name="men's clothing" (click)="Buttonclicked($event)" class="btn btn-link">MensClothing[{{MensClothingcount}}]</button></li>
+              <li><button  name="women's clothing" (click)="Buttonclicked($event)" class="btn btn-link">WomensClothing[{{WomensClothingcount}}]</button></li>
+          </ul>
+          <select (change)="Filterchanged($event)">
+              <option value="electronics">Electronics[{{Electronicscount}}] </option>
+              <option value="jewelery">Jewelery [{{Jewelerycount}}]</option>
+              <option value="men's clothing">MensClothing[{{MensClothingcount}}] </option>
+              <option value="women's clothing">WomensClothing[{{WomensClothingcount}}] </option>
+          </select>
+      </div>
+      
