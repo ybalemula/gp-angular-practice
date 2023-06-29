@@ -30,6 +30,7 @@ import { DineshModule } from './dinesh/dinesh.module';
 import { PranayModule } from './U-Pranay/pranay/pranay.module';
 import { HomeComponent } from './U-Pranay/home/home.component';
 import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
+import { SandeepModule } from './g-sandeep/Components/sandeep/sandeep.module';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
     NareshModule,
     NareshRoutingModule,
     DineshRoutingModule,
-    PranayModule
+    PranayModule,
+    SandeepModule
   ],
   providers: [
     {
