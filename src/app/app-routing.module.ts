@@ -27,6 +27,9 @@ const routes: Routes = [
   { path: 'Sandeep', component: SandeepTestComponent },
    {path:'dinesh',component:DLoginComponent},
    {
+    path: 'Nagarjuna',
+    loadChildren: () => import('./nagarjuna-b/nagarjuna.module').then(m => m.NagarjunaModule)
+  },
     path: 'srikantH',loadChildren: () => import('./t-srikanth/srikanth.module').then(m => m.SrikanthModule)
   },
 
