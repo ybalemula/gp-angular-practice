@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "firstName": "Nagarjuna",
+      "lastName": "Bonala",
+      "email": "nag@king.com",
+      "mobileNo": "9848098480",
+      "weight": "68",
+      "height": "1.6",
+      "bmi": 26.562499999999996,
+      "bmiResult": "Overweight",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Toxic Fat reduction",
+        "Energy and Endurance",
+        "Fitness"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2023-06-21T18:30:00.000Z",
+      "id": "c8kA9NI"
+    },
+    {
+      "firstName": "Srikanth",
+      "lastName": "Thangellapally",
+      "email": "sri@ymail.com",
+      "mobileNo": "632478491",
+      "weight": "61",
+      "height": "1.7",
+      "bmi": 21.107266435986162,
+      "bmiResult": "Normal",
+      "gender": "Male",
+      "requireTrainer": "No",
+      "package": "Monthly",
+      "important": [
+        "Building Lean Muscle",
+        "Healthier Digestive System"
+      ],
+      "haveGymBefore": "No",
+      "enquiryDate": "2023-06-27T18:30:00.000Z",
+      "id": "wd_38MI"
+    }
+  ]
+}

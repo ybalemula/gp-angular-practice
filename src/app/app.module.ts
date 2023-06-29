@@ -30,6 +30,9 @@ import { DineshModule } from './dinesh/dinesh.module';
 import { PranayModule } from './U-Pranay/pranay/pranay.module';
 import { NagarjunaModule } from './nagarjuna-b/nagarjuna.module';
 import { NagarjunaRoutingModule } from './nagarjuna-b/nagarjuna-routing.module';
+import { SrikanthModule } from './t-srikanth/srikanth.module';
+import { SrikanthRoutingModule } from './t-srikanth/srikanth/srikanth-routing.module';
+import { CreateRegistrationComponent } from './t-srikanth/components/create-registration/create-registration.component';
 import { HomeComponent } from './U-Pranay/home/home.component';
 import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
 
@@ -64,6 +67,8 @@ import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
     PranayModule,
     NareshModule,
     NareshRoutingModule,
+    SrikanthModule,
+    SrikanthRoutingModule,
     DineshRoutingModule,
     PranayModule,
     NagarjunaModule,
