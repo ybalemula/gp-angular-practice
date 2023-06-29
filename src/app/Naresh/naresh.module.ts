@@ -8,12 +8,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from 'src/app/material.module';
 import { NareshComponent } from './naresh/naresh.component';
+import { MaincomponentComponent } from './maincomponent/maincomponent.component';
+import { ParentcomponentComponent } from './Decoretorsconsept/parentcomponent/parentcomponent.component';
+import { ChaildcomponentComponent } from './Decoretorsconsept/chaildcomponent/chaildcomponent.component';
 
 //import { HTTP_INTERCEPTORS } from '@angular/common/http';
 // import { TokeninterceptorService } from './services/Token-interceptor/tokeninterceptor.service';
 @NgModule({
   declarations: [
-  NareshComponent
+  NareshComponent,
+  MaincomponentComponent,
+  ParentcomponentComponent,
+  ChaildcomponentComponent
   ],
   imports: [
     CommonModule,

@@ -30,6 +30,8 @@ import { DineshModule } from './dinesh/dinesh.module';
 import { PranayModule } from './U-Pranay/pranay/pranay.module';
 import { NagarjunaModule } from './nagarjuna-b/nagarjuna.module';
 import { NagarjunaRoutingModule } from './nagarjuna-b/nagarjuna-routing.module';
+import { HomeComponent } from './U-Pranay/home/home.component';
+import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { NagarjunaRoutingModule } from './nagarjuna-b/nagarjuna-routing.module';
     PranayModule,
     NareshModule,
     NareshRoutingModule,
+    DineshRoutingModule,
+    PranayModule,
     NagarjunaModule,
     NagarjunaRoutingModule
   ],

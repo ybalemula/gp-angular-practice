@@ -1,5 +1,10 @@
-<mat-form-field>
-       <mat-label>Username</mat-label>   
-       <input type="text" ngModel name="uname" #uname="ngModel" placeholder="Username">
-</mat-form-field>
-<span>{{uname.value}}</span>
+<div class="text-center">
+<h1>WELCOME TO HOME COMPONENT</h1>
+<a routerLink="/pranayhome/login" routerLinkActive="active">Login</a><br>
+<a routerLink="/pranayhome/register" routerLinkActive="active">Register</a><br>
+<a routerLink="/pranayhome/practice" routerLinkActive="active">Get Details</a><br>
+<a routerLink="/ngpractice" routerLinkActive="active">Angular Practice</a>
+<router-outlet></router-outlet>
+</div>
+
+
