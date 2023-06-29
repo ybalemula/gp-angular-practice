@@ -1,0 +1,29 @@
+
+<div class="center">
+          <h3 style="text-align: center;">parentcomponent works!</h3>
+          <button (click)="sendatatochaild()">Send Data Parent To_Cahild</button>
+          <div>
+                    
+                    <table style="border: 1px solid black;" >
+                              <thead>
+                                        <tr>
+                                                  <th>ID</th>
+                                                  <th>title</th>
+                                                  <th>category</th>
+                                        </tr>
+                              </thead>
+                              <tbody *ngFor="let d of chaldata">
+                                        <tr>
+                                                  <td>{{d.id}}</td>
+                                                  <td>{{d.title}}</td>
+                                                  <td>{{d.category}}</td>
+                                        </tr>
+                              </tbody>
+                              
+                    </table>
+          </div>
+</div>
+
+<app-chaildcomponent (chailddata)="getdatafromchaild($event)" [parentdata]="prodoctsdata"></app-chaildcomponent>
+
+<a routerLink="/Naresh">Back</a>
