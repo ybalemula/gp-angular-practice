@@ -20,12 +20,21 @@ import { MohammadModuleModule } from './mohammad-module/mohammad-module.module';
 import { NavyaModuleRoutingModule } from './navya-module/navya-module-routing.module';
 import { NavyaModuleModule } from './navya-module/navya-module.module';
 import { TokeninterceptorService } from './navya-module/services/Token-interceptor/tokeninterceptor.service';
+import { AdityaModule } from './AdityaChandra/aditya/aditya.module';
+import { NareshModule } from './Naresh/naresh.module';
+import { NareshRoutingModule } from './Naresh/naresh-routing.module';
+import { DineshModule } from './dinesh/dinesh.module';
+import { PranayModule } from './U-Pranay/pranay/pranay.module';
+import { HomeComponent } from './U-Pranay/home/home.component';
+import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     YadagiriTestComponent,
     DashboardComponent,
     SandeepTestComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,14 @@ import { TokeninterceptorService } from './navya-module/services/Token-intercept
     NavyaModuleModule,
     NavyaModuleRoutingModule,
     MohammadModuleRoutingModule,
-    MohammadModuleModule
+    MohammadModuleModule,
+    AdityaModule,
+    DineshModule,
+    PranayModule,
+    NareshModule,
+    NareshRoutingModule,
+    DineshRoutingModule,
+    PranayModule
   ],
   providers: [
     {

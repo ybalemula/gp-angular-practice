@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-counter-buttons',
   templateUrl: './counter-buttons.component.html',
   styleUrls: ['./counter-buttons.component.scss']
 })
-export class CounterButtonsComponent {
-
+export class CounterButtonsComponent implements OnInit {
+  @Output() increment=new EventEmitter<void>();
+  @Output() decrement=new EventEmitter<void>();
+  @Output() reset=new EventEmitter<void>();
+ngOnInit(): void {
+  
+}
+  onIncrement()
+  {
+    this.increment.emit();
+  }
+  onDecrement()
+  {
+    this.decrement.emit();
+  }
+  onReset()
+  {
+    this.reset.emit();
+  }
 }
