@@ -1,0 +1,46 @@
+<p>dropdowncomponent works!</p>
+<div class="center">
+Enter Sur Name:<input type="text" [(ngModel)]="sname" required ><br>
+Enter Name:<input type="text" [(ngModel)]="fname" required ><br>
+Select Gender:<input type="radio" [(ngModel)]="gender" value="Male" name="gender" required >Male
+          <input type="radio" [(ngModel)]="gender" value="FeMale" name="gender" required >Female<br>
+          select Country:<select [(ngModel)]="Contryid" (ngModelChange)="contrychange($event)">
+                    <option *ngFor="let da of contrylist" value="{{da.cid}}">{{da.cname}}</option>
+
+          </select><br>
+          select Satate:<select [(ngModel)]="stateid" (ngModelChange)="statechange($event)">
+                    <option *ngFor="let da of statelist" value="{{da.sid}}">{{da.sname}}</option>
+
+          </select><br>
+          select City:<select [(ngModel)]="cityid">
+                  
+                    <option *ngFor="let da of citylist" value="{{da.ccid}}">{{da.ccname}}</option>
+                    
+          </select><br>
+          <button (click)="registretion()">Insert</button>
+          <div>
+                    <table class="table-bordered">
+                              <thead>
+                                        <tr>
+                                                  <th>SurNAme</th>
+                                                  <th>Name</th>
+                                                  <th>Gender</th>
+                                                  <th>Cuntry</th>
+                                                  <th>State</th>
+                                                  <th>City</th>
+                                        </tr>
+                              </thead>
+                              <tbody *ngFor="let d of totalarray">
+                                        <tr>
+                                                  <td>{{d.sname}}</td>
+                                                  <td>{{d.fname}}</td>
+                                                  <td>{{d.gender}}</td>
+                                                  <td>{{d.cuntry}}</td>
+                                                  <td>{{d.state}}</td>
+                                                  <td>{{d.cityid}}</td>
+                                        </tr>
+                              </tbody>
+                    </table>
+          </div>
+</div>
+      
