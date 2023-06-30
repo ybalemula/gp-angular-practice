@@ -24,7 +24,6 @@ const routes: Routes = [
     path: 'mohammad',
     loadChildren: () => import('./mohammad-module/mohammad-module.module').then(m => m.MohammadModuleModule)
   },
-  { path: 'Sandeep', component: SandeepTestComponent },
    {path:'dinesh',component:DLoginComponent},
    {
     path: 'Nagarjuna',
@@ -37,7 +36,8 @@ const routes: Routes = [
  {path:'register', component:CreateRegistrationComponent},
  {path:'list', component:RegistrationListComponent},
  {path:'detail/:id', component:UserDetailComponent},
- {path:'update/:id',component:CreateRegistrationComponent}
+ {path:'update/:id',component:CreateRegistrationComponent},
+   {path: "Sandeep", loadChildren:()=>import('./g-sandeep/Components/sandeep/sandeep.module').then((route)=>route.SandeepModule)},
 ];
 
 @NgModule({
