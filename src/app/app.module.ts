@@ -35,6 +35,7 @@ import { SrikanthRoutingModule } from './t-srikanth/srikanth/srikanth-routing.mo
 import { CreateRegistrationComponent } from './t-srikanth/components/create-registration/create-registration.component';
 import { HomeComponent } from './U-Pranay/home/home.component';
 import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
+import { SandeepModule } from './g-sandeep/Components/sandeep/sandeep.module';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { DineshRoutingModule } from './dinesh/dinesh-routing.module';
     DineshRoutingModule,
     PranayModule,
     NagarjunaModule,
-    NagarjunaRoutingModule
+    NagarjunaRoutingModule,
+    SandeepModule
   ],
   providers: [
     {
