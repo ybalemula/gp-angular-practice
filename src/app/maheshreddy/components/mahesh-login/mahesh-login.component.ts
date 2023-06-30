@@ -7,7 +7,6 @@ import {
 } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
-
 @Component({
   selector: 'app-mahesh-login',
   templateUrl: './mahesh-login.component.html',
@@ -51,7 +50,7 @@ export class MaheshLoginComponent implements OnInit {
           alert('pls enter valide login detaila');
         } else {
           alert('login sucessfull');
-          this._route.navigateByUrl('maheshdasboard');
+          this._route.navigateByUrl('mahesh/dashboard');
         }
       });
     } else {
