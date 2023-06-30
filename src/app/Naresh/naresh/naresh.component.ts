@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CrudservisesService } from '../crudservises.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class NareshComponent {
 this.get()
  }
  dataobj:any=new FormGroup({
-  name:new FormControl(),
+  name:new FormControl([Validators.required,Validators.max]),
   gender:new FormControl(),
   loaction:new FormControl(),
   cellnumber:new FormControl()
